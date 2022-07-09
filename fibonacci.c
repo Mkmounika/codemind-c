@@ -1,14 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int i,n,a=0,b=1,c;
+    int sum=0,first=0,second=1,n,i;
     scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    for(i=0;i<n;i++)
     {
-        printf("%d ",a);
-        c=a+b;
-        a=b;
-        b=c;
+        if(i<=1)
+        {
+            sum=i;
+        }
+        else
+        {
+            sum=first+second;
+            first=second;
+            second=sum;
+        }
+        printf("%d ",sum);
     }
     return 0;
 }
